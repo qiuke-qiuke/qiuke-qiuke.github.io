@@ -1,0 +1,134 @@
+baseURL: "https://keqiu.com/"
+title: "Field Notes"
+theme: "PaperMod"
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: false
+enableRobotsTXT: true
+enableEmoji: true
+
+languages:
+  en:
+    label: "EN"
+    languageAltTitle: "British English"
+    locale: "en-GB"
+    weight: 1
+    title: "Field Notes"
+    menu:
+      main:
+        - identifier: about
+          name: About
+          url: "#about"
+          weight: 10
+        - identifier: writing
+          name: Writing
+          url: "#writing"
+          weight: 20
+        - identifier: contact
+          name: Contact
+          url: "#contact"
+          weight: 30
+  zh:
+    label: "ZH"
+    languageAltTitle: "中文"
+    locale: "zh-CN"
+    weight: 2
+    title: "随笔"
+    params:
+      description: "关于技术、学习与创造的长篇笔记。"
+    menu:
+      main:
+        - identifier: about
+          name: 关于
+          url: "#about"
+          weight: 10
+        - identifier: writing
+          name: 文章
+          url: "#writing"
+          weight: 20
+        - identifier: contact
+          name: 联系
+          url: "#contact"
+          weight: 30
+
+pagination:
+  pagerSize: 8
+
+taxonomies:
+  tag: tags
+  category: categories
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  author: "Your Name"
+  description: "Long-form notes on technology, learning, and making useful things."
+  keywords:
+    - blog
+    - technology
+    - learning
+    - field notes
+
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowWordCount: false
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
+  displayFullLangName: false
+  hideSummary: false
+  disableSpecial1stPost: true
+
+  socialIcons:
+    - name: github
+      title: GitHub
+      url: "https://github.com/"
+    - name: email
+      title: Email
+      url: "mailto:hello@example.com"
+    - name: rss
+      title: RSS
+      url: "/index.xml"
+
+  assets:
+    disableHLJS: true
+
+  cover:
+    hiddenInList: true
+    hiddenInSingle: false
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10
+    keys:
+      - title
+      - permalink
+      - summary
+      - content
+
+markup:
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+  goldmark:
+    renderer:
+      unsafe: false

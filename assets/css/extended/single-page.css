@@ -1,0 +1,60 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--theme);
+}
+
+.list .header {
+  background: var(--code-bg);
+}
+
+.home-section {
+  padding: 44px 0 24px;
+  border-top: 1px solid var(--tertiary);
+  scroll-margin-top: 88px;
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.section-header h2 {
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+.section-header p,
+.section-copy {
+  color: var(--secondary);
+}
+
+.section-posts .post-entry:last-child {
+  margin-bottom: 0;
+}
+
+.section-posts .entry-header h3 {
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.lang-menu .lang-separator {
+  margin-inline: 4px;
+  color: var(--secondary);
+}
+
+.lang-menu .active {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
