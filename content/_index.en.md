@@ -2,7 +2,7 @@
 title: "Ke Qiu"
 description: "PhD candidate in robotics at Zhejiang University"
 heroTitle: "Welcome!"
-heroText: "Hi, this is Ke Qiu. I am a PhD candidate in robotics at Zhejiang University."
+heroText: "Hi, this is Ke. I am a PhD candidate in robotics at Zhejiang University."
 heroImage: "/images/keqiu.png"
 newsTitle: "News"
 news:
@@ -13,7 +13,7 @@ publicationsTitle: "Publications"
 publications:
   - title: "External force estimation in continuum robots: Closed-form solution, solver and validation"
     image: "/images/publication-placeholder.svg"
-    authors: "**Ke Qiu**, Fei Wang, Sven Lilge, Rong Xiong, Haojian Lu, Yue Wang"
+    authors: "**Ke Qiu**, Fei Wang, Sven Lilge, Yujie Cui, Rong Xiong, Haojian Lu, Yue Wang"
     venue: "Submitted to *The International Journal of Robotics Research*; under review"
     links:
       - label: "Video"
@@ -34,14 +34,14 @@ publications:
     links:
       - label: "Paper"
         url: "https://www.roboticsproceedings.org/rss19/p091.html"
-      - label: "Website"
+      - label: "Page"
         url: "https://sites.google.com/view/micsolver/home"
 educationTitle: "Education"
 fromLabel: "From"
 toLabel: "To"
 education:
   - startDate: "Sept 2022"
-    endDate: "(perhaps) June 2027"
+    endDate: "(Perhaps) June 2027"
     title: "PhD Candidate, Control Science and Engineering"
     institution: "Zhejiang University"
     text: "Supervised by Profs. Yue Wang, Haojian Lu, and Rong Xiong"

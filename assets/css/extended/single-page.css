@@ -57,15 +57,7 @@ html {
   border: 1px solid var(--tertiary);
   border-radius: 14px;
   background: #fff;
-  box-shadow: var(--panel-shadow);
   object-fit: contain;
-  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-}
-
-.hero-image:hover {
-  border-color: var(--primary);
-  box-shadow: var(--panel-shadow-hover);
-  transform: translateY(-2px);
 }
 
 .home-section {
@@ -439,6 +431,29 @@ html {
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+[data-copy-email] {
+  position: relative;
+}
+
+[data-copy-email].email-copied::after {
+  position: absolute;
+  bottom: calc(100% - 7px);
+  left: 13px;
+  z-index: 10;
+  padding: 4px 8px;
+  border: 1px solid var(--tertiary);
+  border-radius: 6px;
+  background: var(--entry);
+  box-shadow: var(--panel-shadow-hover);
+  color: var(--primary);
+  content: attr(data-copied-label);
+  font-size: 12px;
+  line-height: 1.2;
+  pointer-events: none;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 760px) {

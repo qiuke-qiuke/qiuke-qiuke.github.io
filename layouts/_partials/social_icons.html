@@ -1,7 +1,8 @@
 <div class="social-icons" {{ with .align }}align="{{ . }}"{{ end }}>
   {{- range site.Params.socialIcons }}
   <a href="{{ trim .url " " | safeURL }}"
-    {{- if .download }} download{{ else }} target="_blank" rel="noopener noreferrer me"{{ end }}
+    {{- if .download }} download{{ else if ne .name "email" }} target="_blank" rel="noopener noreferrer me"{{ end }}
+    {{- if eq .name "email" }} data-copy-email="{{ replace .url "mailto:" "" }}" data-copied-label="{{ if eq site.Language.Lang "zh" }}已复制{{ else }}Copied{{ end }}"{{ end }}
     title="{{ (.title | default .name) | title }}"
     aria-label="{{ (.title | default .name) | title }}">
     {{- if eq .name "orcid" }}

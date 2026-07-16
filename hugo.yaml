@@ -39,7 +39,7 @@ languages:
     title: "邱轲"
     params:
       author: "邱轲"
-      description: "浙江大学机器人方向博士研究生，研究连续体机器人的建模、运动学、力估计与控制。"
+      description: "浙江大学机器人方向博士生"
     menu:
       main:
         - identifier: news
@@ -47,7 +47,7 @@ languages:
           url: "#news"
           weight: 10
         - identifier: publications
-          name: 论文
+          name: 论文发表
           url: "#publications"
           weight: 20
         - identifier: education
@@ -79,7 +79,7 @@ minify:
 params:
   env: production
   author: "Ke Qiu"
-  description: "PhD candidate in robotics at Zhejiang University, researching continuum robot modelling, kinematics, force estimation, and control."
+  description: "PhD candidate in robotics at Zhejiang University"
   keywords:
     - Ke Qiu
     - robotics
