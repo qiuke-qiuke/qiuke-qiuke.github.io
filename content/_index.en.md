@@ -1,5 +1,5 @@
 ---
-title: "Ke Qiu"
+title: "Ke Qiu (邱轲)"
 description: "PhD candidate in robotics at Zhejiang University"
 heroTitle: "Welcome!"
 heroText: "Hi, this is Ke. I am a PhD candidate in robotics at Zhejiang University."

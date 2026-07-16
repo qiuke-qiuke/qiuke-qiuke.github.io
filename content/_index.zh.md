@@ -1,5 +1,5 @@
 ---
-title: "邱轲"
+title: "Ke Qiu (邱轲)"
 description: "浙江大学机器人方向博士生"
 heroTitle: "欢迎！"
 heroText: "我是邱轲，浙江大学机器人方向博士生"
