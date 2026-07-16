@@ -23,9 +23,9 @@ languages:
           name: Publications
           url: "#publications"
           weight: 20
-        - identifier: contact
-          name: Contact
-          url: "#contact"
+        - identifier: education
+          name: Education
+          url: "#education"
           weight: 30
         - identifier: links
           name: Links
@@ -50,9 +50,9 @@ languages:
           name: 论文
           url: "#publications"
           weight: 20
-        - identifier: contact
-          name: 联系
-          url: "#contact"
+        - identifier: education
+          name: 教育经历
+          url: "#education"
           weight: 30
         - identifier: links
           name: 链接
@@ -103,21 +103,22 @@ params:
   disableSpecial1stPost: true
 
   socialIcons:
-    - name: github
-      title: GitHub
-      url: "https://github.com/qiuke-qiuke"
+    - name: email
+      title: Email
+      url: "mailto:ke.qiu@zju.edu.cn"
     - name: googlescholar
       title: Google Scholar
       url: "https://scholar.google.com/citations?user=KTRTwDkAAAAJ&hl=en&oi=ao"
     - name: orcid
       title: ORCID
       url: "https://orcid.org/0009-0006-8700-2982"
-    - name: email
-      title: Email
-      url: "mailto:ke.qiu@zju.edu.cn"
-    - name: rss
-      title: RSS
-      url: "/index.xml"
+    - name: github
+      title: GitHub
+      url: "https://github.com/qiuke-qiuke"
+    - name: cv
+      title: CV
+      url: "/cv3.pdf"
+      download: true
 
   assets:
     disableHLJS: true
