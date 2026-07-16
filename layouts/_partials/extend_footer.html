@@ -1,0 +1,46 @@
+<script>
+  (() => {
+    const storageKey = "homepage-language-scroll";
+    const languageLinks = document.querySelectorAll(".lang-menu a:not(.active)");
+
+    languageLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        const headerOffset = document.querySelector(".header")?.offsetHeight || 0;
+        const sections = [...document.querySelectorAll(".home-section")];
+        const current = sections
+          .filter((section) => section.offsetTop <= window.scrollY + headerOffset + 1)
+          .at(-1);
+
+        const position = current
+          ? { id: current.id, offset: window.scrollY - current.offsetTop }
+          : { id: "top", offset: window.scrollY };
+
+        sessionStorage.setItem(storageKey, JSON.stringify(position));
+
+        if (current) {
+          const destination = new URL(link.href, window.location.href);
+          destination.hash = current.id;
+          link.href = destination.toString();
+        }
+      });
+    });
+
+    const saved = sessionStorage.getItem(storageKey);
+    if (!saved) return;
+
+    sessionStorage.removeItem(storageKey);
+
+    try {
+      const position = JSON.parse(saved);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          const section = position.id === "top" ? null : document.getElementById(position.id);
+          const top = section ? section.offsetTop + position.offset : position.offset;
+          window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+        });
+      });
+    } catch (_) {
+      // Ignore invalid or stale session data.
+    }
+  })();
+</script>

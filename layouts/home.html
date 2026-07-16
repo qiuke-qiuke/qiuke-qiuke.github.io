@@ -2,7 +2,7 @@
 <div class="single-page-home">
   <article class="first-entry home-info">
     {{- with .Params.heroImage }}
-    <img class="hero-image" src="{{ . }}" alt="" width="132" height="132">
+    <img class="hero-image" src="{{ . }}" alt="" width="150" height="200">
     {{- end }}
     <header class="entry-header">
       <h1>{{ .Params.heroTitle }}</h1>
@@ -90,7 +90,10 @@
     <div class="link-grid">
       {{- range .Params.links }}
       <a class="profile-card researcher-link" href="{{ .url }}">
-        <span>{{ .label }}</span><span class="link-arrow" aria-hidden="true">↗</span>
+        <img class="researcher-image" src="{{ .image }}" alt="{{ .label }}" loading="lazy" style="object-position: {{ .imagePosition | default "center" }};">
+        <span class="researcher-meta">
+          <span>{{ .label }}</span><span class="link-arrow" aria-hidden="true">↗</span>
+        </span>
       </a>
       {{- end }}
     </div>
