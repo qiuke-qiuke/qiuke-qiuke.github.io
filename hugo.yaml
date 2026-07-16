@@ -43,7 +43,7 @@ languages:
     menu:
       main:
         - identifier: news
-          name: 新闻
+          name: 新消息
           url: "#news"
           weight: 10
         - identifier: publications
