@@ -13,10 +13,33 @@ html {
   background: var(--code-bg);
 }
 
+.home-section,
+.cv-content > h2 {
+  scroll-margin-top: 88px;
+}
+
 .home-section {
   padding: 44px 0 24px;
   border-top: 1px solid var(--tertiary);
-  scroll-margin-top: 88px;
+}
+
+.cv-content > h2 {
+  margin-top: 44px;
+  padding-top: 44px;
+  border-top: 1px solid var(--tertiary);
+  font-size: 30px;
+}
+
+.cv-content > h3 {
+  margin-top: 30px;
+}
+
+.cv-content li {
+  margin-bottom: 10px;
+}
+
+.cv-content strong {
+  color: var(--primary);
 }
 
 .section-header {

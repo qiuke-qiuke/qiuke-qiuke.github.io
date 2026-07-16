@@ -1,5 +1,5 @@
 baseURL: "https://qiuke-qiuke.github.io/"
-title: "Field Notes"
+title: "Ke Qiu"
 theme: "PaperMod"
 defaultContentLanguage: "en"
 defaultContentLanguageInSubdir: false
@@ -12,43 +12,60 @@ languages:
     languageAltTitle: "British English"
     locale: "en-GB"
     weight: 1
-    title: "Field Notes"
+    title: "Ke Qiu"
     menu:
       main:
         - identifier: about
           name: About
           url: "#about"
           weight: 10
+        - identifier: publications
+          name: Publications
+          url: "#publications"
+          weight: 20
+        - identifier: experience
+          name: Experience
+          url: "#experience"
+          weight: 30
         - identifier: writing
           name: Writing
           url: "#writing"
-          weight: 20
+          weight: 40
         - identifier: contact
           name: Contact
           url: "#contact"
-          weight: 30
+          weight: 50
   zh:
     label: "ZH"
     languageAltTitle: "中文"
     locale: "zh-CN"
     weight: 2
-    title: "随笔"
+    title: "邱轲"
     params:
-      description: "关于技术、学习与创造的长篇笔记。"
+      author: "邱轲"
+      description: "浙江大学机器人方向博士研究生，研究连续体机器人的建模、运动学、力估计与控制。"
     menu:
       main:
         - identifier: about
           name: 关于
           url: "#about"
           weight: 10
+        - identifier: publications
+          name: 论文
+          url: "#publications"
+          weight: 20
+        - identifier: experience
+          name: 经历
+          url: "#experience"
+          weight: 30
         - identifier: writing
           name: 文章
           url: "#writing"
-          weight: 20
+          weight: 40
         - identifier: contact
           name: 联系
           url: "#contact"
-          weight: 30
+          weight: 50
 
 pagination:
   pagerSize: 8
@@ -69,13 +86,15 @@ minify:
 
 params:
   env: production
-  author: "Your Name"
-  description: "Long-form notes on technology, learning, and making useful things."
+  author: "Ke Qiu"
+  description: "PhD candidate in robotics at Zhejiang University, researching continuum robot modelling, kinematics, force estimation, and control."
   keywords:
-    - blog
-    - technology
-    - learning
-    - field notes
+    - Ke Qiu
+    - robotics
+    - continuum robots
+    - kinematics
+    - force estimation
+    - Zhejiang University
 
   defaultTheme: auto
   disableThemeToggle: false
@@ -94,10 +113,16 @@ params:
   socialIcons:
     - name: github
       title: GitHub
-      url: "https://github.com/"
+      url: "https://github.com/qiuke-qiuke"
+    - name: googlescholar
+      title: Google Scholar
+      url: "https://scholar.google.com/citations?user=KTRTwDkAAAAJ&hl=en&oi=ao"
+    - name: orcid
+      title: ORCID
+      url: "https://orcid.org/0009-0006-8700-2982"
     - name: email
       title: Email
-      url: "mailto:hello@example.com"
+      url: "mailto:ke.qiu@zju.edu.cn"
     - name: rss
       title: RSS
       url: "/index.xml"
@@ -130,5 +155,9 @@ markup:
     guessSyntax: true
     lineNos: false
   goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true
     renderer:
       unsafe: false

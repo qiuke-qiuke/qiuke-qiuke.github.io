@@ -12,14 +12,9 @@
     </footer>
   </article>
 
-  <section id="about" class="home-section">
-    <header class="section-header">
-      <h2>{{ .Params.aboutTitle }}</h2>
-    </header>
-    <div class="section-copy post-content">
-      {{ .Params.aboutText | markdownify }}
-    </div>
-  </section>
+  <div class="cv-content post-content">
+    {{ .Content }}
+  </div>
 
   <section id="writing" class="home-section">
     <header class="section-header">
@@ -58,4 +53,3 @@
   </section>
 </div>
 {{- end }}
-
