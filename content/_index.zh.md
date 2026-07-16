@@ -8,7 +8,7 @@ newsTitle: "新闻"
 news:
   - date: "2026-07-16"
     displayDate: "2026年7月16日"
-    text: "主页上线。"
+    text: "主页上线"
 publicationsTitle: "论文发表"
 publications:
   - title: "External force estimation in continuum robots: Closed-form solution, solver and validation"
