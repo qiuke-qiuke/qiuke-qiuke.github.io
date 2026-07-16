@@ -15,26 +15,22 @@ languages:
     title: "Ke Qiu"
     menu:
       main:
-        - identifier: about
-          name: About
-          url: "#about"
+        - identifier: news
+          name: News
+          url: "#news"
           weight: 10
         - identifier: publications
           name: Publications
           url: "#publications"
           weight: 20
-        - identifier: experience
-          name: Experience
-          url: "#experience"
-          weight: 30
-        - identifier: writing
-          name: Writing
-          url: "#writing"
-          weight: 40
         - identifier: contact
           name: Contact
           url: "#contact"
-          weight: 50
+          weight: 30
+        - identifier: links
+          name: Links
+          url: "#links"
+          weight: 40
   zh:
     label: "ZH"
     languageAltTitle: "中文"
@@ -46,26 +42,22 @@ languages:
       description: "浙江大学机器人方向博士研究生，研究连续体机器人的建模、运动学、力估计与控制。"
     menu:
       main:
-        - identifier: about
-          name: 关于
-          url: "#about"
+        - identifier: news
+          name: 新闻
+          url: "#news"
           weight: 10
         - identifier: publications
           name: 论文
           url: "#publications"
           weight: 20
-        - identifier: experience
-          name: 经历
-          url: "#experience"
-          weight: 30
-        - identifier: writing
-          name: 文章
-          url: "#writing"
-          weight: 40
         - identifier: contact
           name: 联系
           url: "#contact"
-          weight: 50
+          weight: 30
+        - identifier: links
+          name: 链接
+          url: "#links"
+          weight: 40
 
 pagination:
   pagerSize: 8

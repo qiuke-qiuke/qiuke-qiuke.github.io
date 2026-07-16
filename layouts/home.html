@@ -12,32 +12,40 @@
     </footer>
   </article>
 
-  <div class="cv-content post-content">
-    {{ .Content }}
-  </div>
-
-  <section id="writing" class="home-section">
+  <section id="news" class="home-section">
     <header class="section-header">
-      <h2>{{ .Params.writingTitle }}</h2>
-      <p>{{ .Params.writingText }}</p>
+      <h2>{{ .Params.newsTitle }}</h2>
     </header>
+    <ol class="news-timeline">
+      {{- range .Params.news }}
+      <li>
+        <time datetime="{{ .date }}">{{ .displayDate }}</time>
+        <p>{{ .text }}</p>
+      </li>
+      {{- end }}
+    </ol>
+  </section>
 
-    <div class="section-posts">
-      {{- $posts := where site.RegularPages "Section" "posts" }}
-      {{- range $posts.ByDate.Reverse }}
-      <article class="post-entry">
+  <section id="publications" class="home-section">
+    <header class="section-header">
+      <h2>{{ .Params.publicationsTitle }}</h2>
+      <p>{{ .Params.publicationsText }}</p>
+    </header>
+    <div class="section-posts publication-posts">
+      {{- range .Params.publications }}
+      <article class="post-entry publication-entry">
         <header class="entry-header">
-          <h3 class="entry-hint-parent">{{ .Title }}</h3>
+          <h3>{{ .title }}</h3>
         </header>
-        {{- if ne (.Param "hideSummary") true }}
-        <div class="entry-content">
-          <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+        <div class="entry-content publication-details">
+          <div class="publication-line">{{ .authors | markdownify }}</div>
+          <div class="publication-line">{{ .venue | markdownify }}</div>
+          {{- with .links }}
+          <p class="publication-links">
+            {{- range $index, $link := . }}{{ if $index }} · {{ end }}<a href="{{ $link.url }}">{{ $link.label }}</a>{{ end }}
+          </p>
+          {{- end }}
         </div>
-        {{- end }}
-        <footer class="entry-footer">
-          {{- partial "post_meta.html" . -}}
-        </footer>
-        <a class="entry-link" aria-label="{{ .Title | plainify }}" href="{{ .RelPermalink }}"></a>
       </article>
       {{- end }}
     </div>
@@ -48,8 +56,19 @@
       <h2>{{ .Params.contactTitle }}</h2>
     </header>
     <div class="section-copy post-content">
-      {{ .Params.contactText | markdownify }}
+      {{ .Params.contactText | markdownify }} | <a href="{{ "cv3.pdf" | relURL }}" download>{{ .Params.cvLabel }}</a>
     </div>
+  </section>
+
+  <section id="links" class="home-section">
+    <header class="section-header">
+      <h2>{{ .Params.linksTitle }}</h2>
+    </header>
+    <ul class="external-links">
+      {{- range .Params.links }}
+      <li><a href="{{ .url }}">{{ .label }}</a></li>
+      {{- end }}
+    </ul>
   </section>
 </div>
 {{- end }}
