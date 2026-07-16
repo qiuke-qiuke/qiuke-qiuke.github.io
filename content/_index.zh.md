@@ -4,7 +4,7 @@ description: "浙江大学机器人方向博士生"
 heroTitle: "欢迎！"
 heroText: "我是邱轲，浙江大学机器人方向博士生"
 heroImage: "/images/keqiu.png"
-newsTitle: "新闻"
+newsTitle: "新消息"
 news:
   - date: "2026-07-16"
     displayDate: "2026年7月16日"
