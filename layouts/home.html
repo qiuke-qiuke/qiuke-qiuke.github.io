@@ -74,9 +74,14 @@
         </time>
         <span class="education-marker" aria-hidden="true"></span>
         <article class="profile-card education-card">
-          <p class="education-institution">{{ .institution }}</p>
-          <h3>{{ .title }}</h3>
-          <p>{{ .text }}</p>
+          <div class="education-logo-panel">
+            <img class="education-logo" src="{{ "/images/zju_logo.svg" | relURL }}" alt="" width="64" height="64">
+          </div>
+          <div class="education-body">
+            <p class="education-institution">{{ .institution }}</p>
+            <h3>{{ .title }}</h3>
+            <p>{{ .text }}</p>
+          </div>
         </article>
       </div>
       {{- end }}

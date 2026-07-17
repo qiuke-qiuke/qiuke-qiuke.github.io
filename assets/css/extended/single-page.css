@@ -2,6 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Use one centred caret for the scroll-to-top control. */
+.top-link svg polyline:last-child {
+  display: none;
+}
+
+.top-link svg polyline:first-child {
+  transform: translateY(4px);
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -354,11 +363,31 @@ html {
 .education-card {
   position: relative;
   z-index: 1;
-  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 156px minmax(0, 1fr);
+  padding: 0;
+  overflow: hidden;
+}
+
+.education-logo-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.education-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.education-body {
+  padding: 28px 32px 28px 0;
 }
 
 .education-card h3 {
-  margin: 7px 0 12px;
+  margin: 8px 0 12px;
   font-size: 22px;
   line-height: 1.35;
 }
@@ -551,7 +580,17 @@ html {
 
   .education-card {
     grid-column: 2;
-    padding: 24px;
+    grid-template-columns: 116px minmax(0, 1fr);
+    padding: 0;
+  }
+
+  .education-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .education-body {
+    padding: 22px 22px 22px 0;
   }
 }
 
