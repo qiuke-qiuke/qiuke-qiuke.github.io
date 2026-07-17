@@ -27,10 +27,14 @@ languages:
           name: Education
           url: "#education"
           weight: 30
+        - identifier: experience
+          name: Internship
+          url: "#experience"
+          weight: 40
         - identifier: links
           name: Links
           url: "#links"
-          weight: 40
+          weight: 50
   zh:
     label: "ZH"
     languageAltTitle: "中文"
@@ -54,10 +58,14 @@ languages:
           name: 教育经历
           url: "#education"
           weight: 30
+        - identifier: experience
+          name: 实习
+          url: "#experience"
+          weight: 40
         - identifier: links
           name: 链接
           url: "#links"
-          weight: 40
+          weight: 50
 
 pagination:
   pagerSize: 8

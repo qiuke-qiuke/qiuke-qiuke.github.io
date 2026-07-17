@@ -50,6 +50,23 @@ education:
     title: "学士，机械工程"
     institution: "浙江大学 | 竺可桢荣誉项目"
     text: "辅修数学"
+experienceTitle: "实习"
+experience:
+  - startDate: "2024年11月"
+    endDate: "2025年1月"
+    institution: "浙江人形机器人创新中心有限公司"
+    lines:
+      - "动力学参数辨识与控制参数优化"
+      - "并联关节机构的逆运动学分析"
+    logo: "/images/zjh_logo.png"
+    logoAlt: "ZJHumanoid 标志"
+  - startDate: "2021年7月"
+    endDate: "2021年8月"
+    institution: "ABB中国研究院, ABB工程(上海)有限公司"
+    lines:
+      - "工业机械臂现场高精度标定算法"
+    logo: "/images/abb.svg"
+    logoAlt: "ABB 标志"
 linksTitle: "链接"
 links:
   - label: "向平宇"

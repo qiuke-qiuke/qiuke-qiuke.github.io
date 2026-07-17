@@ -398,11 +398,141 @@ html {
   line-height: 1.6;
 }
 
-.education-card .education-institution {
+.education-card .education-institution,
+.experience-card .experience-institution {
   color: var(--primary);
   font-size: 17px;
   font-weight: 700;
   letter-spacing: 0.025em;
+}
+
+.experience-timeline {
+  position: relative;
+  left: -24px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.experience-timeline::before {
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 175px;
+  z-index: 0;
+  width: 2px;
+  background: var(--tertiary);
+  content: "";
+}
+
+.experience-item::after {
+  position: absolute;
+  top: 47px;
+  left: 176px;
+  z-index: 0;
+  width: 26px;
+  height: 1px;
+  background: var(--tertiary);
+  content: "";
+}
+
+.experience-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 150px 20px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.experience-item + .experience-item {
+  margin-top: 28px;
+}
+
+.experience-item time {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 24px;
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.experience-item .date-label {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.experience-item .date-to {
+  margin-top: 7px;
+}
+
+.experience-marker {
+  position: relative;
+  z-index: 2;
+  width: 14px;
+  height: 14px;
+  margin: 40px auto 0;
+  border: 3px solid var(--entry);
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+.experience-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 156px minmax(0, 1fr);
+  min-height: 132px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.experience-logo-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #fff;
+}
+
+.experience-logo {
+  width: 100%;
+  max-width: 88px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.experience-body {
+  align-self: center;
+  padding: 28px 32px 28px 0;
+}
+
+.experience-card h3 {
+  margin: 0 0 10px;
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+.experience-card p {
+  margin: 0;
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.experience-card .experience-institution {
+  margin-bottom: 10px;
+}
+
+.experience-detail + .experience-detail {
+  margin-top: 4px;
 }
 
 .link-grid {
@@ -533,7 +663,8 @@ html {
   }
 
   .news-timeline li::after,
-  .education-item::after {
+  .education-item::after,
+  .experience-item::after {
     display: none;
   }
 
@@ -590,6 +721,49 @@ html {
   }
 
   .education-body {
+    padding: 22px 22px 22px 0;
+  }
+
+  .experience-card {
+    grid-column: 2;
+    grid-template-columns: 116px minmax(0, 1fr);
+  }
+
+  .experience-timeline {
+    left: 0;
+  }
+
+  .experience-timeline::before {
+    left: 7px;
+  }
+
+  .experience-item {
+    grid-template-columns: 16px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .experience-item time {
+    grid-column: 2;
+    padding: 0;
+    text-align: left;
+  }
+
+  .experience-marker {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    margin-top: 4px;
+  }
+
+  .experience-logo-panel {
+    padding: 20px;
+  }
+
+  .experience-logo {
+    max-width: 66px;
+    max-height: 50px;
+  }
+
+  .experience-body {
     padding: 22px 22px 22px 0;
   }
 }

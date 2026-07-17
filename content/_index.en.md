@@ -50,6 +50,23 @@ education:
     title: "BEng, Mechanical Engineering"
     institution: "Zhejiang University | Chu Kochen Honors Program"
     text: "Minor in Mathematics"
+experienceTitle: "Internship"
+experience:
+  - startDate: "Nov 2024"
+    endDate: "Jan 2025"
+    institution: "Zhejiang Humanoid Robot Innovation Center Co. Ltd."
+    lines:
+      - "Dynamic parameter identification and control optimisation"
+      - "Inverse kinematics analysis of parallel joint mechanisms"
+    logo: "/images/zjh_logo.png"
+    logoAlt: "ZJHumanoid logo"
+  - startDate: "Jul 2021"
+    endDate: "Aug 2021"
+    institution: "ABB Corporate Research Center, ABB Engineering (Shanghai) Ltd."
+    lines:
+      - "High-precision on-site calibration for industrial manipulators"
+    logo: "/images/abb.svg"
+    logoAlt: "ABB logo"
 linksTitle: "Links"
 links:
   - label: "Pingyu Xiang"

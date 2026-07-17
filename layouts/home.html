@@ -88,6 +88,36 @@
     </div>
   </section>
 
+  <section id="experience" class="home-section">
+    <header class="section-header">
+      <h2>{{ .Params.experienceTitle }}</h2>
+    </header>
+    <div class="experience-timeline">
+      {{- range .Params.experience }}
+      <div class="experience-item">
+        <time>
+          <span class="date-label">{{ $.Params.fromLabel }}</span>
+          <span>{{ .startDate }}</span>
+          <span class="date-label date-to">{{ $.Params.toLabel }}</span>
+          <span>{{ .endDate }}</span>
+        </time>
+        <span class="experience-marker" aria-hidden="true"></span>
+        <article class="profile-card experience-card">
+          <div class="experience-logo-panel">
+            <img class="experience-logo" src="{{ .logo }}" alt="{{ .logoAlt }}" loading="lazy">
+          </div>
+          <div class="experience-body">
+            <p class="experience-institution">{{ .institution }}</p>
+            {{- range .lines }}
+            <p class="experience-detail">{{ . }}</p>
+            {{- end }}
+          </div>
+        </article>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+
   <section id="links" class="home-section">
     <header class="section-header">
       <h2>{{ .Params.linksTitle }}</h2>
