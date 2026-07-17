@@ -78,6 +78,10 @@ html {
   padding-top: 20px;
 }
 
+#links {
+  padding-bottom: 68px;
+}
+
 .section-header {
   margin: 0 auto 38px;
   text-align: center;
@@ -490,7 +494,7 @@ html {
   z-index: 1;
   display: grid;
   grid-template-columns: 156px minmax(0, 1fr);
-  min-height: 132px;
+  min-height: 160px;
   padding: 0;
   overflow: hidden;
 }
@@ -592,27 +596,41 @@ html {
   text-underline-offset: 4px;
 }
 
-[data-copy-email] {
+.home-info .social-icons a {
   position: relative;
 }
 
-[data-copy-email].email-copied::after {
+.home-info .social-icons a::after {
   position: absolute;
-  bottom: calc(100% - 7px);
-  left: 13px;
-  z-index: 10;
-  padding: 4px 8px;
-  border: 1px solid var(--tertiary);
-  border-radius: 6px;
-  background: var(--entry);
-  box-shadow: var(--panel-shadow-hover);
-  color: var(--primary);
-  content: attr(data-copied-label);
-  font-size: 12px;
-  line-height: 1.2;
+  top: calc(100% - 3px);
+  left: 50%;
+  color: var(--secondary);
+  content: attr(data-hover-label);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  opacity: 0;
   pointer-events: none;
   transform: translateX(-50%);
   white-space: nowrap;
+}
+
+.home-info .social-icons a:first-of-type::after {
+  left: 13px;
+}
+
+.home-info .social-icons a svg {
+  transition: transform 140ms ease;
+}
+
+.home-info .social-icons a:hover::after,
+.home-info .social-icons a:focus-visible::after {
+  opacity: 1;
+}
+
+.home-info .social-icons a:hover svg,
+.home-info .social-icons a:focus-visible svg {
+  transform: translateY(-2px);
 }
 
 @media screen and (max-width: 760px) {
@@ -628,6 +646,10 @@ html {
 
   .home-section {
     padding-top: 56px;
+  }
+
+  #links {
+    padding-bottom: 56px;
   }
 
   #news {

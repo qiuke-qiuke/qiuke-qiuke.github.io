@@ -147,14 +147,23 @@
 
       if (!copied) return;
 
-      const originalLabel = link.getAttribute("aria-label");
-      link.classList.add("email-copied");
+      const originalLabel = link.dataset.defaultAriaLabel || link.getAttribute("aria-label");
+      const originalHoverLabel = link.dataset.defaultHoverLabel || link.dataset.hoverLabel;
+      link.dataset.defaultAriaLabel = originalLabel;
+      link.dataset.defaultHoverLabel = originalHoverLabel;
+      link.dataset.hoverLabel = link.dataset.copiedLabel;
       link.setAttribute("aria-label", link.dataset.copiedLabel);
 
-      window.setTimeout(() => {
-        link.classList.remove("email-copied");
-        link.setAttribute("aria-label", originalLabel);
-      }, 1600);
+      if (!link.classList.contains("email-awaiting-leave")) {
+        link.classList.add("email-awaiting-leave");
+        link.addEventListener("mouseleave", () => {
+          link.dataset.hoverLabel = link.dataset.defaultHoverLabel;
+          link.setAttribute("aria-label", link.dataset.defaultAriaLabel);
+          delete link.dataset.defaultHoverLabel;
+          delete link.dataset.defaultAriaLabel;
+          link.classList.remove("email-awaiting-leave");
+        }, { once: true });
+      }
     });
   })();
 </script>

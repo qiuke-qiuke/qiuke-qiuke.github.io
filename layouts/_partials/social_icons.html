@@ -3,15 +3,16 @@
   <a href="{{ trim .url " " | safeURL }}"
     {{- if .download }} download{{ else if ne .name "email" }} target="_blank" rel="noopener noreferrer me"{{ end }}
     {{- if eq .name "email" }} data-copy-email="{{ replace .url "mailto:" "" }}" data-copied-label="{{ if eq site.Language.Lang "zh" }}已复制{{ else }}Copied{{ end }}"{{ end }}
-    title="{{ (.title | default .name) | title }}"
+    data-hover-label="{{ if eq .name "googlescholar" }}Scholar{{ else }}{{ .title | default .name }}{{ end }}"
     aria-label="{{ (.title | default .name) | title }}">
     {{- if eq .name "orcid" }}
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="9" />
-      <circle cx="8" cy="8.5" r="1" fill="currentColor" stroke="none" />
-      <path d="M8 11.5V16" />
-      <path d="M12 8.5V16h2a3.75 3.75 0 0 0 0-7.5z" />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+      <g transform="translate(0 -0.25)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7.56 7.58h.01" />
+        <path d="M7.56 9.82v6.6" />
+        <path transform="translate(1 0)" d="M10.06 16.42v-6.6h2.42c2.46 0 3.96 1.36 3.96 3.3s-1.5 3.3-3.96 3.3h-2.42Z" />
+      </g>
     </svg>
     {{- else }}
     {{ partial "svg.html" . }}
