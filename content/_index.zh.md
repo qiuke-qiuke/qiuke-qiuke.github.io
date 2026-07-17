@@ -1,5 +1,5 @@
 ---
-title: "Ke Qiu (邱轲)"
+title: "邱轲"
 description: "浙江大学机器人方向博士生"
 heroTitle: "欢迎！"
 heroText: "我是邱轲，浙江大学机器人方向博士生"
@@ -9,7 +9,7 @@ news:
   - date: "2026-07-16"
     displayDate: "2026年7月16日"
     text: "主页上线"
-publicationsTitle: "论文发表"
+publicationsTitle: "发表论文"
 publications:
   - title: "External force estimation in continuum robots: Closed-form solution, solver and validation"
     image: "/images/publication-placeholder.svg"
@@ -50,7 +50,7 @@ education:
     title: "学士，机械工程"
     institution: "浙江大学 | 竺可桢荣誉项目"
     text: "辅修数学"
-experienceTitle: "实习"
+experienceTitle: "实习经历"
 experience:
   - startDate: "2024年11月"
     endDate: "2025年1月"

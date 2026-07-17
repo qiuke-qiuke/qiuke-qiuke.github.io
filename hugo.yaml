@@ -1,5 +1,5 @@
 baseURL: "https://qiuke-qiuke.github.io/"
-title: "Ke Qiu"
+title: "Ke Qiu (邱轲)"
 theme: "PaperMod"
 defaultContentLanguage: "en"
 defaultContentLanguageInSubdir: false
@@ -12,7 +12,10 @@ languages:
     languageAltTitle: "British English"
     locale: "en-GB"
     weight: 1
-    title: "Ke Qiu"
+    title: "Ke Qiu (邱轲)"
+    params:
+      label:
+        text: "Ke Qiu"
     menu:
       main:
         - identifier: news
@@ -40,10 +43,12 @@ languages:
     languageAltTitle: "中文"
     locale: "zh-CN"
     weight: 2
-    title: "邱轲"
+    title: "Ke Qiu (邱轲)"
     params:
       author: "邱轲"
       description: "浙江大学机器人方向博士生"
+      label:
+        text: "邱 轲"
     menu:
       main:
         - identifier: news
@@ -51,7 +56,7 @@ languages:
           url: "#news"
           weight: 10
         - identifier: publications
-          name: 论文发表
+          name: 发表论文
           url: "#publications"
           weight: 20
         - identifier: education
@@ -59,7 +64,7 @@ languages:
           url: "#education"
           weight: 30
         - identifier: experience
-          name: 实习
+          name: 实习经历
           url: "#experience"
           weight: 40
         - identifier: links
