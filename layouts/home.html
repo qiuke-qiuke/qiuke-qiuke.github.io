@@ -49,7 +49,7 @@
             <div class="publication-line">{{ .venue | markdownify }}</div>
             {{- with .links }}
             <div class="publication-links">
-              {{- range $link := . }}<a href="{{ $link.url }}">{{ $link.label }}</a>{{ end }}
+              {{- range $link := . }}<a href="{{ $link.url }}" target="_blank" rel="noopener noreferrer">{{ $link.label }}</a>{{ end }}
             </div>
             {{- end }}
           </div>
@@ -124,7 +124,7 @@
     </header>
     <div class="link-grid">
       {{- range .Params.links }}
-      <a class="profile-card researcher-link" href="{{ .url }}">
+      <a class="profile-card researcher-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
         <img class="researcher-image" src="{{ .image }}" alt="{{ .label }}" loading="lazy" style="object-position: {{ .imagePosition | default "center" }};">
         <span class="researcher-meta">
           <span>{{ .label }}</span><span class="link-arrow" aria-hidden="true">↗</span>
