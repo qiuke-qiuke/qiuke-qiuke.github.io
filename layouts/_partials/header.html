@@ -48,10 +48,12 @@
       </div>
     </div>
 
+    {{- $isHome := .IsHome }}
     <ul id="menu" class="menu">
       {{- range site.Menus.main }}
+      {{- $menuURL := .URL }}
       <li>
-        <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
+        <a href="{{ if and $isHome (hasPrefix $menuURL "#") }}{{ $menuURL }}{{ else }}{{ $menuURL | absLangURL }}{{ end }}" title="{{ .Title | default .Name }}">
           <span>{{ .Name }}</span>
         </a>
       </li>

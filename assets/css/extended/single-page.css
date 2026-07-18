@@ -386,6 +386,18 @@ html {
   object-fit: contain;
 }
 
+.education-logo-dark {
+  display: none;
+}
+
+[data-theme="dark"] .education-logo-light {
+  display: none;
+}
+
+[data-theme="dark"] .education-logo-dark {
+  display: block;
+}
+
 .education-body {
   padding: 28px 32px 28px 0;
 }
@@ -505,6 +517,11 @@ html {
   justify-content: center;
   padding: 24px;
   background: #fff;
+}
+
+[data-theme="dark"] .education-logo-panel,
+[data-theme="dark"] .experience-logo-panel {
+  background: transparent;
 }
 
 .experience-logo {
