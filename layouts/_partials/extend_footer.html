@@ -128,6 +128,24 @@
       history.replaceState(history.state, "", link.hash);
     });
 
+    window.setTimeout(() => {
+      const topLink = document.getElementById("top-link");
+      if (!topLink) return;
+
+      const updateTopLink = () => {
+        const news = document.getElementById("news");
+        const headerHeight = document.querySelector(".header")?.offsetHeight || 0;
+        const threshold = news
+          ? news.getBoundingClientRect().top + window.scrollY - headerHeight
+          : window.innerHeight;
+        const scrollTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+        topLink.classList.toggle("hidden", scrollTop < threshold);
+      };
+
+      window.onscroll = updateTopLink;
+      updateTopLink();
+    }, 0);
+
     window.addEventListener("popstate", () => window.location.reload());
   })();
 </script>
