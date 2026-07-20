@@ -14,7 +14,7 @@ publications:
   - title: "External force estimation in continuum robots: Closed-form solution, solver and validation"
     image: "/images/publication-placeholder.svg"
     authors: "**Ke Qiu**, Fei Wang, Sven Lilge, Yujie Cui, Rong Xiong, Haojian Lu, Yue Wang"
-    venue: "Submitted to *The International Journal of Robotics Research*; under review"
+    venue: "Under review. Submitted to *The International Journal of Robotics Research*"
     links:
       - label: "Video"
         url: "https://www.bilibili.com/video/BV1m1cczvEqu/"
