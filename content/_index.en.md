@@ -50,7 +50,7 @@ education:
     title: "BEng, Mechanical Engineering"
     institution: "Zhejiang University | Chu Kochen Honors Program"
     text: "Minor in Mathematics"
-experienceTitle: "Internship"
+experienceTitle: "Internships"
 experience:
   - startDate: "Nov 2024"
     endDate: "Jan 2025"
