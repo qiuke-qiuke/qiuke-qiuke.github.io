@@ -130,7 +130,7 @@ params:
       url: "https://github.com/qiuke-qiuke"
     - name: cv
       title: CV
-      url: "/cv3.pdf"
+      url: "/qiuke.pdf"
       download: true
 
   assets:
